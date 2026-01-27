@@ -283,6 +283,10 @@
         background: linear-gradient(135deg, #fff4a3 0%, #ffe66d 100%);
       }
 
+      .question-block:nth-child(6) {
+        background: linear-gradient(135deg, #ffd6a5 0%, #fdffb6 100%);
+      }
+
       .question-block:hover {
         transform: scale(1.02);
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
@@ -723,39 +727,41 @@
         </div>
         <div class="progress-info">
           <div class="progress-label">📊 Progress:</div>
-          <div class="progress-value" id="progress">0/5</div>
+          <div class="progress-value" id="progress">0/6</div>
         </div>
       </div>
 
       <div class="content">
         <form id="quizForm">
-          <!-- QUESTION 1 -->
+          <!-- Question 1 (VERY EASY) -->
           <div class="question-block">
             <div class="question-number">1</div>
-            <div class="question-text">
-              What is a variable in Python?
-            </div>
+            <div class="question-text">What is a variable in Python?</div>
             <div class="options">
               <div class="option">
-                <input type="radio" name="q1" value="A" />
-                <label>A type of computer</label>
+                <input type="radio" name="q1" value="A" /><label
+                  >A type of computer</label
+                >
               </div>
               <div class="option">
-                <input type="radio" name="q1" value="B" />
-                <label>A container that stores values</label>
+                <input type="radio" name="q1" value="B" /><label
+                  >A container that stores values</label
+                >
               </div>
               <div class="option">
-                <input type="radio" name="q1" value="C" />
-                <label>A Python keyword</label>
+                <input type="radio" name="q1" value="C" /><label
+                  >A Python keyword</label
+                >
               </div>
               <div class="option">
-                <input type="radio" name="q1" value="D" />
-                <label>A special symbol</label>
+                <input type="radio" name="q1" value="D" /><label
+                  >A special symbol</label
+                >
               </div>
             </div>
           </div>
 
-          <!-- QUESTION 2 -->
+          <!-- Question 2 (EASY) -->
           <div class="question-block">
             <div class="question-number">2</div>
             <div class="question-text">
@@ -763,25 +769,25 @@
             </div>
             <div class="options">
               <div class="option">
-                <input type="radio" name="q2" value="A" />
-                <label>2age</label>
+                <input type="radio" name="q2" value="A" /><label>2age</label>
               </div>
               <div class="option">
-                <input type="radio" name="q2" value="B" />
-                <label>student age</label>
+                <input type="radio" name="q2" value="B" /><label
+                  >student age</label
+                >
               </div>
               <div class="option">
-                <input type="radio" name="q2" value="C" />
-                <label>student_age</label>
+                <input type="radio" name="q2" value="C" /><label
+                  >student_age</label
+                >
               </div>
               <div class="option">
-                <input type="radio" name="q2" value="D" />
-                <label>@score</label>
+                <input type="radio" name="q2" value="D" /><label>@score</label>
               </div>
             </div>
           </div>
 
-          <!-- QUESTION 3 -->
+          <!-- Question 3 (EASY) -->
           <div class="question-block">
             <div class="question-number">3</div>
             <div class="question-text">
@@ -789,72 +795,109 @@
             </div>
             <div class="options">
               <div class="option">
-                <input type="radio" name="q3" value="A" />
-                <label>int</label>
+                <input type="radio" name="q3" value="A" /><label>int</label>
               </div>
               <div class="option">
-                <input type="radio" name="q3" value="B" />
-                <label>str</label>
+                <input type="radio" name="q3" value="B" /><label>str</label>
               </div>
               <div class="option">
-                <input type="radio" name="q3" value="C" />
-                <label>float</label>
+                <input type="radio" name="q3" value="C" /><label>float</label>
               </div>
               <div class="option">
-                <input type="radio" name="q3" value="D" />
-                <label>bool</label>
+                <input type="radio" name="q3" value="D" /><label>bool</label>
               </div>
             </div>
           </div>
 
-          <!-- QUESTION 4 -->
+          <!-- Question 4 (MEDIUM) -->
           <div class="question-block">
             <div class="question-number">4</div>
             <div class="question-text">
-              What does the <code>type()</code> function do in Python?
+              What does the type() function do in Python?
             </div>
             <div class="options">
               <div class="option">
-                <input type="radio" name="q4" value="A" />
-                <label>Converts one data type to another</label>
+                <input type="radio" name="q4" value="A" /><label
+                  >Converts one data type to another</label
+                >
               </div>
               <div class="option">
-                <input type="radio" name="q4" value="B" />
-                <label>Takes input from the user</label>
+                <input type="radio" name="q4" value="B" /><label
+                  >Takes input from the user</label
+                >
               </div>
               <div class="option">
-                <input type="radio" name="q4" value="C" />
-                <label>Shows the data type of a variable</label>
+                <input type="radio" name="q4" value="C" /><label
+                  >Shows the data type of a variable</label
+                >
               </div>
               <div class="option">
-                <input type="radio" name="q4" value="D" />
-                <label>Prints output on the screen</label>
+                <input type="radio" name="q4" value="D" /><label
+                  >Prints output on the screen</label
+                >
               </div>
             </div>
           </div>
 
-          <!-- QUESTION 5 -->
+          <!-- Question 5 (MEDIUM) -->
           <div class="question-block">
             <div class="question-number">5</div>
             <div class="question-text">
-              Which statement about comments is correct?
+              What will be the data type of value entered by the user?
+            </div>
+            <div class="code-box">
+              <pre>
+age = input()
+print(type(age))
+</pre
+              >
             </div>
             <div class="options">
               <div class="option">
-                <input type="radio" name="q5" value="A" />
-                <label>Python executes comments</label>
+                <input type="radio" name="q5" value="A" /><label>int</label>
               </div>
               <div class="option">
-                <input type="radio" name="q5" value="B" />
-                <label>Comments are used to store values</label>
+                <input type="radio" name="q5" value="B" /><label>float</label>
               </div>
               <div class="option">
-                <input type="radio" name="q5" value="C" />
-                <label>Comments help explain code and are ignored by Python</label>
+                <input type="radio" name="q5" value="C" /><label>str</label>
               </div>
               <div class="option">
-                <input type="radio" name="q5" value="D" />
-                <label>Comments can only be written in one line</label>
+                <input type="radio" name="q5" value="D" /><label>bool</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 6 (HARD) -->
+          <div class="question-block">
+            <div class="question-number">6</div>
+            <div class="question-text">What will be the output?</div>
+            <div class="code-box">
+              <pre>
+x = "10"
+y = int(x)
+print(type(y))
+</pre
+              >
+            </div>
+            <div class="options">
+              <div class="option">
+                <input type="radio" name="q6" value="A" /><label
+                  >&lt;class 'str'&gt;</label
+                >
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="B" /><label
+                  >&lt;class 'int'&gt;</label
+                >
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="C" /><label
+                  >&lt;class 'float'&gt;</label
+                >
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="D" /><label>Error</label>
               </div>
             </div>
           </div>
@@ -880,6 +923,7 @@
         q3: "D",
         q4: "C",
         q5: "C",
+        q6: "B",
       };
 
       const QUIZ_DURATION = 180;

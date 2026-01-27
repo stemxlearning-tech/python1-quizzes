@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STEMxLearning - Lesson 5 Quiz</title>
+    <title>STEMxLearning - Lesson 4 Quiz</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap");
 
@@ -716,8 +716,8 @@
             ><span class="brand-learning">Learning</span>
           </div>
         </div>
-        <h1 class="quiz-title">🎯 Lesson 5 Quiz</h1>
-        <p class="quiz-subtitle">Control flow statements-I</p>
+        <h1 class="quiz-title">🎯 Lesson 4 Quiz</h1>
+        <p class="quiz-subtitle">String and its Operations</p>
       </div>
 
       <div class="timer-section">
@@ -733,224 +733,168 @@
 
       <div class="content">
         <form id="quizForm">
-          <!-- Question 1 (VERY EASY – truthy / falsy) -->
+          <!-- Question 1 (VERY EASY) -->
           <div class="question-block">
             <div class="question-number">1</div>
             <div class="question-text">
-              🧮 A counter increases only if condition is true. What will be
-              printed?
-            </div>
-            <div class="code-box">
-              <pre>
-count = 0
-
-if count:
-    print("Started")
-else:
-    print("Not started")
-</pre
-              >
+              Which of the following is a string literal in Python?
             </div>
             <div class="options">
               <div class="option">
-                <input type="radio" name="q1" value="A" /><label>Started</label>
+                <input type="radio" name="q1" value="A" /><label>Python</label>
               </div>
               <div class="option">
                 <input type="radio" name="q1" value="B" /><label
-                  >Not started</label
+                  >"Python"</label
                 >
               </div>
               <div class="option">
-                <input type="radio" name="q1" value="C" /><label>0</label>
+                <input type="radio" name="q1" value="C" /><label
+                  >print(Python)</label
+                >
               </div>
               <div class="option">
-                <input type="radio" name="q1" value="D" /><label>Error</label>
+                <input type="radio" name="q1" value="D" /><label>@Python</label>
               </div>
             </div>
           </div>
 
-          <!-- Question 2 (EASY – if else) -->
+          <!-- Question 2 (EASY – ESCAPE SEQUENCE) -->
           <div class="question-block">
             <div class="question-number">2</div>
             <div class="question-text">
-              🛒 A shop gives free delivery only if the cart value is 999 or
-              more. What will this code print?
-            </div>
-            <div class="code-box">
-              <pre>
-cart = 750
-
-if cart >= 999:
-    print("Free Delivery")
-else:
-    print("Delivery Charge Applied")
-</pre
-              >
+              What does <code>\t</code> do in a string?
             </div>
             <div class="options">
               <div class="option">
                 <input type="radio" name="q2" value="A" /><label
-                  >Free Delivery</label
+                  >Adds a new line</label
                 >
               </div>
               <div class="option">
                 <input type="radio" name="q2" value="B" /><label
-                  >Delivery Charge Applied</label
+                  >Adds a tab space</label
                 >
               </div>
               <div class="option">
                 <input type="radio" name="q2" value="C" /><label
-                  >No output</label
+                  >Adds a normal space</label
                 >
               </div>
               <div class="option">
-                <input type="radio" name="q2" value="D" /><label>Error</label>
+                <input type="radio" name="q2" value="D" /><label
+                  >Ends the string</label
+                >
               </div>
             </div>
           </div>
 
-          <!-- Question 3 (EASY – boolean logic) -->
+          <!-- Question 3 (MEDIUM – STRING SLICING) -->
           <div class="question-block">
             <div class="question-number">3</div>
-            <div class="question-text">
-              🎓 A scholarship system checks marks and income. What will be
-              printed?
-            </div>
+            <div class="question-text">What will be the output?</div>
             <div class="code-box">
               <pre>
-marks = 82
-income = 300000
-
-print(marks > 80 and income < 500000)
+word = "COMPUTER"
+print(word[2:6])
 </pre
               >
             </div>
             <div class="options">
               <div class="option">
-                <input type="radio" name="q3" value="A" /><label>True</label>
+                <input type="radio" name="q3" value="A" /><label>MPUT</label>
               </div>
               <div class="option">
-                <input type="radio" name="q3" value="B" /><label>False</label>
+                <input type="radio" name="q3" value="B" /><label>PUTE</label>
               </div>
               <div class="option">
-                <input type="radio" name="q3" value="C" /><label>82</label>
+                <input type="radio" name="q3" value="C" /><label>MPUTE</label>
               </div>
               <div class="option">
-                <input type="radio" name="q3" value="D" /><label>Error</label>
+                <input type="radio" name="q3" value="D" /><label>PUTER</label>
               </div>
             </div>
           </div>
 
-          <!-- Question 4 (MEDIUM – pass statement) -->
+          <!-- Question 4 (MEDIUM – BUILT-IN + CONCATENATION) -->
           <div class="question-block">
             <div class="question-number">4</div>
-            <div class="question-text">
-              🚆 A railway system skips checking VIP tickets. What happens?
-            </div>
+            <div class="question-text">What will be printed?</div>
             <div class="code-box">
               <pre>
-ticket = "VIP"
-
-if ticket == "VIP":
-    pass
-else:
-    print("Check ticket")
+a = "Py"
+b = "thon"
+print(a + b.lower())
 </pre
               >
             </div>
             <div class="options">
               <div class="option">
-                <input type="radio" name="q4" value="A" /><label
-                  >Check ticket</label
-                >
+                <input type="radio" name="q4" value="A" /><label>Python</label>
               </div>
               <div class="option">
-                <input type="radio" name="q4" value="B" /><label>VIP</label>
+                <input type="radio" name="q4" value="B" /><label>Python</label>
               </div>
               <div class="option">
-                <input type="radio" name="q4" value="C" /><label
-                  >No output</label
-                >
+                <input type="radio" name="q4" value="C" /><label>Python</label>
               </div>
               <div class="option">
-                <input type="radio" name="q4" value="D" /><label>Error</label>
+                <input type="radio" name="q4" value="D" /><label>Python</label>
               </div>
             </div>
           </div>
 
-          <!-- Question 5 (MEDIUM – elif) -->
+          <!-- Question 5 (MEDIUM+ – ESCAPE + OUTPUT VISUALIZING) -->
           <div class="question-block">
             <div class="question-number">5</div>
-            <div class="question-text">
-              🧾 Bill validation system. What will be printed?
-            </div>
+            <div class="question-text">What will be printed?</div>
             <div class="code-box">
               <pre>
-amount = -200
-
-if amount > 0:
-    print("Valid bill")
-elif amount == 0:
-    print("Zero bill")
-else:
-    print("Invalid bill")
+print("A\nB\nC")
 </pre
               >
             </div>
             <div class="options">
               <div class="option">
-                <input type="radio" name="q5" value="A" /><label
-                  >Valid bill</label
-                >
+                <input type="radio" name="q5" value="A" /><label>A B C</label>
               </div>
               <div class="option">
                 <input type="radio" name="q5" value="B" /><label
-                  >Zero bill</label
+                  >A<br />B<br />C</label
                 >
               </div>
               <div class="option">
-                <input type="radio" name="q5" value="C" /><label
-                  >Invalid bill</label
-                >
+                <input type="radio" name="q5" value="C" /><label>ABC</label>
               </div>
               <div class="option">
-                <input type="radio" name="q5" value="D" /><label
-                  >No output</label
-                >
+                <input type="radio" name="q5" value="D" /><label>Error</label>
               </div>
             </div>
           </div>
 
-          <!-- Question 6 (HARD – FLOW + INDENTATION TRICK, NO NESTED IF) -->
+          <!-- Question 6 (HARD – MULTI-CONCEPT STRING THINKING) -->
           <div class="question-block">
             <div class="question-number">6</div>
             <div class="question-text">🔥 What will be printed?</div>
             <div class="code-box">
               <pre>
-x = 0
-
-if x:
-    print("A")
-elif x == 0:
-    print("B")
-print("C")
+lang = "python"
+print(f"{lang[:3].upper()}-{lang[-2:]}")
 </pre
               >
             </div>
             <div class="options">
               <div class="option">
-                <input type="radio" name="q6" value="A" /><label>B</label>
+                <input type="radio" name="q6" value="A" /><label>PYT-on</label>
               </div>
               <div class="option">
-                <input type="radio" name="q6" value="B" /><label>B C</label>
+                <input type="radio" name="q6" value="B" /><label>PYT-on</label>
               </div>
               <div class="option">
-                <input type="radio" name="q6" value="C" /><label>C</label>
+                <input type="radio" name="q6" value="C" /><label>PYT-on</label>
               </div>
               <div class="option">
-                <input type="radio" name="q6" value="D" /><label
-                  >No output</label
-                >
+                <input type="radio" name="q6" value="D" /><label>PYT-on</label>
               </div>
             </div>
           </div>
@@ -973,10 +917,10 @@ print("C")
       const correctAnswers = {
         q1: "B",
         q2: "B",
-        q3: "A",
-        q4: "C",
-        q5: "C",
-        q6: "B",
+        q3: "B",
+        q4: "A",
+        q5: "B",
+        q6: "A",
       };
 
       const QUIZ_DURATION = 180;

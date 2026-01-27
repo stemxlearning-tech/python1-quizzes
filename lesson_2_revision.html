@@ -283,6 +283,10 @@
         background: linear-gradient(135deg, #fff4a3 0%, #ffe66d 100%);
       }
 
+      .question-block:nth-child(6) {
+        background: linear-gradient(135deg, #ffd6a5 0%, #fdffb6 100%);
+      }
+
       .question-block:hover {
         transform: scale(1.02);
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
@@ -723,80 +727,153 @@
         </div>
         <div class="progress-info">
           <div class="progress-label">📊 Progress:</div>
-          <div class="progress-value" id="progress">0/5</div>
+          <div class="progress-value" id="progress">0/6</div>
         </div>
       </div>
 
       <div class="content">
         <form id="quizForm">
-
-          <!-- QUESTION 1 -->
+          <!-- Question 1 (VERY EASY) -->
           <div class="question-block">
             <div class="question-number">1</div>
             <div class="question-text">
               Which of the following is NOT allowed in a Python variable name?
             </div>
             <div class="options">
-              <div class="option"><input type="radio" name="q1" value="A" /><label>Letters</label></div>
-              <div class="option"><input type="radio" name="q1" value="B" /><label>Underscore _</label></div>
-              <div class="option"><input type="radio" name="q1" value="C" /><label>Spaces</label></div>
-              <div class="option"><input type="radio" name="q1" value="D" /><label>Numbers</label></div>
+              <div class="option">
+                <input type="radio" name="q1" value="A" /><label>Letters</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q1" value="B" /><label
+                  >Underscore _</label
+                >
+              </div>
+              <div class="option">
+                <input type="radio" name="q1" value="C" /><label>Spaces</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q1" value="D" /><label>Numbers</label>
+              </div>
             </div>
           </div>
 
-          <!-- QUESTION 2 -->
+          <!-- Question 2 (EASY) -->
           <div class="question-block">
             <div class="question-number">2</div>
             <div class="question-text">
               Which data type is used to store text in Python?
             </div>
             <div class="options">
-              <div class="option"><input type="radio" name="q2" value="A" /><label>int</label></div>
-              <div class="option"><input type="radio" name="q2" value="B" /><label>float</label></div>
-              <div class="option"><input type="radio" name="q2" value="C" /><label>str</label></div>
-              <div class="option"><input type="radio" name="q2" value="D" /><label>bool</label></div>
+              <div class="option">
+                <input type="radio" name="q2" value="A" /><label>int</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q2" value="B" /><label>float</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q2" value="C" /><label>str</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q2" value="D" /><label>bool</label>
+              </div>
             </div>
           </div>
 
-          <!-- QUESTION 3 -->
+          <!-- Question 3 (EASY) -->
           <div class="question-block">
             <div class="question-number">3</div>
-            <div class="question-text">
-              What will <code>type(25.5)</code> return?
-            </div>
+            <div class="question-text">What will type(25.5) return?</div>
             <div class="options">
-              <div class="option"><input type="radio" name="q3" value="A" /><label>int</label></div>
-              <div class="option"><input type="radio" name="q3" value="B" /><label>str</label></div>
-              <div class="option"><input type="radio" name="q3" value="C" /><label>bool</label></div>
-              <div class="option"><input type="radio" name="q3" value="D" /><label>float</label></div>
+              <div class="option">
+                <input type="radio" name="q3" value="A" /><label>int</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q3" value="B" /><label>str</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q3" value="C" /><label>bool</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q3" value="D" /><label>float</label>
+              </div>
             </div>
           </div>
 
-          <!-- QUESTION 4 -->
+          <!-- Question 4 (MEDIUM) -->
           <div class="question-block">
             <div class="question-number">4</div>
             <div class="question-text">
-              What is the default data type returned by <code>input()</code>?
+              What is the default data type returned by input() in Python?
             </div>
             <div class="options">
-              <div class="option"><input type="radio" name="q4" value="A" /><label>int</label></div>
-              <div class="option"><input type="radio" name="q4" value="B" /><label>float</label></div>
-              <div class="option"><input type="radio" name="q4" value="C" /><label>string</label></div>
-              <div class="option"><input type="radio" name="q4" value="D" /><label>boolean</label></div>
+              <div class="option">
+                <input type="radio" name="q4" value="A" /><label>int</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q4" value="B" /><label>float</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q4" value="C" /><label>string</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q4" value="D" /><label>boolean</label>
+              </div>
             </div>
           </div>
 
-          <!-- QUESTION 5 -->
+          <!-- Question 5 (MEDIUM) -->
           <div class="question-block">
             <div class="question-number">5</div>
             <div class="question-text">
               Which symbol is used to write a single-line comment in Python?
             </div>
             <div class="options">
-              <div class="option"><input type="radio" name="q5" value="A" /><label>//</label></div>
-              <div class="option"><input type="radio" name="q5" value="B" /><label>#</label></div>
-              <div class="option"><input type="radio" name="q5" value="C" /><label>/* */</label></div>
-              <div class="option"><input type="radio" name="q5" value="D" /><label>--</label></div>
+              <div class="option">
+                <input type="radio" name="q5" value="A" /><label>//</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q5" value="B" /><label>#</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q5" value="C" /><label>/* */</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q5" value="D" /><label>--</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 6 (HARD – TRICKY) -->
+          <div class="question-block">
+            <div class="question-number">6</div>
+            <div class="question-text">🔥 What will be printed?</div>
+            <div class="code-box">
+              <pre>
+x = input()
+y = int(x) + 5
+print(type(y))
+</pre
+              >
+            </div>
+            <div class="options">
+              <div class="option">
+                <input type="radio" name="q6" value="A" /><label
+                  >&lt;class 'str'&gt;</label
+                >
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="B" /><label
+                  >&lt;class 'int'&gt;</label
+                >
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="C" /><label
+                  >&lt;class 'float'&gt;</label
+                >
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="D" /><label>Error</label>
+              </div>
             </div>
           </div>
 
@@ -821,6 +898,7 @@
         q3: "D",
         q4: "C",
         q5: "B",
+        q6: "B",
       };
 
       const QUIZ_DURATION = 180;

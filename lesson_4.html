@@ -283,6 +283,10 @@
         background: linear-gradient(135deg, #fff4a3 0%, #ffe66d 100%);
       }
 
+      .question-block:nth-child(6) {
+        background: linear-gradient(135deg, #ffd6a5 0%, #fdffb6 100%);
+      }
+
       .question-block:hover {
         transform: scale(1.02);
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
@@ -723,13 +727,13 @@
         </div>
         <div class="progress-info">
           <div class="progress-label">📊 Progress:</div>
-          <div class="progress-value" id="progress">0/5</div>
+          <div class="progress-value" id="progress">0/6</div>
         </div>
       </div>
 
       <div class="content">
         <form id="quizForm">
-          <!-- Q1 -->
+          <!-- Question 1 (VERY EASY) -->
           <div class="question-block">
             <div class="question-number">1</div>
             <div class="question-text">
@@ -751,7 +755,7 @@
             </div>
           </div>
 
-          <!-- Q2 -->
+          <!-- Question 2 (EASY) -->
           <div class="question-block">
             <div class="question-number">2</div>
             <div class="question-text">
@@ -775,160 +779,122 @@
             </div>
           </div>
 
-          <!-- Q3 -->
+          <!-- Question 3 (MEDIUM – SLICING THINKING) -->
           <div class="question-block">
             <div class="question-number">3</div>
-            <div class="question-text">
-              What will be the output?
-              <pre><code>text = "PYTHON"
-print(text[1:4])</code></pre>
+            <div class="question-text">What will be the output?</div>
+            <div class="code-box">
+              <pre>
+word = "PROGRAM"
+print(word[1:5])
+</pre
+              >
             </div>
             <div class="options">
               <div class="option">
-                <input type="radio" name="q3" value="A" /><label>PYT</label>
+                <input type="radio" name="q3" value="A" /><label>PROG</label>
               </div>
               <div class="option">
-                <input type="radio" name="q3" value="B" /><label>YTH</label>
+                <input type="radio" name="q3" value="B" /><label>ROGR</label>
               </div>
               <div class="option">
-                <input type="radio" name="q3" value="C" /><label>THO</label>
+                <input type="radio" name="q3" value="C" /><label>ROGR</label>
               </div>
               <div class="option">
-                <input type="radio" name="q3" value="D" /><label>YTHO</label>
+                <input type="radio" name="q3" value="D" /><label>ROG</label>
               </div>
             </div>
           </div>
 
-          <!-- Q4 -->
+          <!-- Question 4 (MEDIUM – ESCAPE + OUTPUT VISUALIZATION) -->
           <div class="question-block">
             <div class="question-number">4</div>
-            <div class="question-text">
-              What is the output?
-              <pre><code>word = "CODE"
-print(word[-1])</code></pre>
+            <div class="question-text">What will be printed?</div>
+            <div class="code-box">
+              <pre>
+print("Hi\nPython")
+</pre
+              >
             </div>
             <div class="options">
               <div class="option">
-                <input type="radio" name="q4" value="A" /><label>C</label>
+                <input type="radio" name="q4" value="A" /><label
+                  >HiPython</label
+                >
               </div>
               <div class="option">
-                <input type="radio" name="q4" value="B" /><label>O</label>
+                <input type="radio" name="q4" value="B" /><label
+                  >Hi Python</label
+                >
               </div>
               <div class="option">
-                <input type="radio" name="q4" value="C" /><label>D</label>
+                <input type="radio" name="q4" value="C" /><label
+                  >Hi<br />Python</label
+                >
               </div>
               <div class="option">
-                <input type="radio" name="q4" value="D" /><label>E</label>
+                <input type="radio" name="q4" value="D" /><label>Error</label>
               </div>
             </div>
           </div>
 
-          <!-- Q5 -->
+          <!-- Question 5 (MEDIUM+ – CONCATENATION + BUILT-IN) -->
           <div class="question-block">
             <div class="question-number">5</div>
-            <div class="question-text">
-              Which operator is used to join two strings in Python?
+            <div class="question-text">What will be printed?</div>
+            <div class="code-box">
+              <pre>
+a = "Py"
+b = "thon"
+print(a + b.upper())
+</pre
+              >
             </div>
             <div class="options">
               <div class="option">
-                <input type="radio" name="q5" value="A" /><label>*</label>
+                <input type="radio" name="q5" value="A" /><label>Python</label>
               </div>
               <div class="option">
-                <input type="radio" name="q5" value="B" /><label>,</label>
+                <input type="radio" name="q5" value="B" /><label>PyTHON</label>
               </div>
               <div class="option">
-                <input type="radio" name="q5" value="C" /><label>+</label>
+                <input type="radio" name="q5" value="C" /><label>PYTHON</label>
               </div>
               <div class="option">
-                <input type="radio" name="q5" value="D" /><label>&</label>
+                <input type="radio" name="q5" value="D" /><label>Error</label>
               </div>
             </div>
           </div>
 
-          <!-- Q6 -->
+          <!-- Question 6 (HARD – MULTI-CONCEPT STRING THINKING) -->
           <div class="question-block">
             <div class="question-number">6</div>
-            <div class="question-text">
-              What does <code>\n</code> do in a string?
+            <div class="question-text">🔥 What will be printed?</div>
+            <div class="code-box">
+              <pre>
+name = "python"
+print(f"Lang:\n{name[1:4].upper()}")
+</pre
+              >
             </div>
             <div class="options">
               <div class="option">
                 <input type="radio" name="q6" value="A" /><label
-                  >Adds a space</label
+                  >Lang: YTH</label
                 >
               </div>
               <div class="option">
                 <input type="radio" name="q6" value="B" /><label
-                  >Adds a tab</label
+                  >Lang:<br />YTH</label
                 >
               </div>
               <div class="option">
                 <input type="radio" name="q6" value="C" /><label
-                  >Moves to a new line</label
+                  >Lang: yth</label
                 >
               </div>
               <div class="option">
-                <input type="radio" name="q6" value="D" /><label
-                  >Ends the string</label
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Q7 -->
-          <div class="question-block">
-            <div class="question-number">7</div>
-            <div class="question-text">
-              Which method is used for string formatting in older Python
-              versions?
-            </div>
-            <div class="options">
-              <div class="option">
-                <input type="radio" name="q7" value="A" /><label>join()</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q7" value="B" /><label
-                  >format()</label
-                >
-              </div>
-              <div class="option">
-                <input type="radio" name="q7" value="C" /><label>split()</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q7" value="D" /><label
-                  >replace()</label
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Q8 -->
-          <div class="question-block">
-            <div class="question-number">8</div>
-            <div class="question-text">
-              What will be the output?
-              <pre><code>name = "Alex"
-age = 12
-print(f"My name is {name} and I am {age} years old")</code></pre>
-            </div>
-            <div class="options">
-              <div class="option">
-                <input type="radio" name="q8" value="A" /><label
-                  >My name is name and I am age years old</label
-                >
-              </div>
-              <div class="option">
-                <input type="radio" name="q8" value="B" /><label
-                  >My name is Alex and I am 12 years old</label
-                >
-              </div>
-              <div class="option">
-                <input type="radio" name="q8" value="C" /><label>Error</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q8" value="D" /><label
-                  >{name} {age}</label
-                >
+                <input type="radio" name="q6" value="D" /><label>Error</label>
               </div>
             </div>
           </div>
@@ -952,11 +918,9 @@ print(f"My name is {name} and I am {age} years old")</code></pre>
         q1: "B",
         q2: "D",
         q3: "B",
-        q4: "D",
-        q5: "C",
-        q6: "C",
-        q7: "B",
-        q8: "B",
+        q4: "C",
+        q5: "B",
+        q6: "B",
       };
 
       const QUIZ_DURATION = 180;

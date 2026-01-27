@@ -283,6 +283,10 @@
         background: linear-gradient(135deg, #fff4a3 0%, #ffe66d 100%);
       }
 
+      .question-block:nth-child(6) {
+        background: linear-gradient(135deg, #ffd6a5 0%, #fdffb6 100%);
+      }
+
       .question-block:hover {
         transform: scale(1.02);
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
@@ -723,43 +727,51 @@
         </div>
         <div class="progress-info">
           <div class="progress-label">📊 Progress:</div>
-          <div class="progress-value" id="progress">0/5</div>
+          <div class="progress-value" id="progress">0/6</div>
         </div>
       </div>
 
       <div class="content">
         <form id="quizForm">
-          <!-- QUESTION 1 -->
+          <!-- Question 1 (VERY EASY – variables) -->
           <div class="question-block">
             <div class="question-number">1</div>
-            <div class="question-text">
-              What will this code print?
-              <pre>print(Hello)</pre>
-            </div>
+            <div class="question-text">What is a variable in Python?</div>
             <div class="options">
               <div class="option">
-                <input type="radio" name="q1" value="A" /><label>Hello</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q1" value="B" /><label>"Hello"</label>
-              </div>
-              <div class="option">
-                <input type="radio" name="q1" value="C" /><label
-                  >print(Hello)</label
+                <input type="radio" name="q1" value="A" /><label
+                  >A program</label
                 >
               </div>
               <div class="option">
-                <input type="radio" name="q1" value="D" /><label>Error</label>
+                <input type="radio" name="q1" value="B" /><label
+                  >A function</label
+                >
+              </div>
+              <div class="option">
+                <input type="radio" name="q1" value="C" /><label
+                  >A container that stores values</label
+                >
+              </div>
+              <div class="option">
+                <input type="radio" name="q1" value="D" /><label
+                  >A type of error</label
+                >
               </div>
             </div>
           </div>
 
-          <!-- QUESTION 2 -->
+          <!-- Question 2 (EASY – arithmetic operators) -->
           <div class="question-block">
             <div class="question-number">2</div>
             <div class="question-text">
               What will be the output of this code?
-              <pre>print(4 + 7)</pre>
+            </div>
+            <div class="code-box">
+              <pre>
+print(4 + 7)
+</pre
+              >
             </div>
             <div class="options">
               <div class="option">
@@ -777,35 +789,35 @@
             </div>
           </div>
 
-          <!-- QUESTION 3 -->
+          <!-- Question 3 (EASY – print statement) -->
           <div class="question-block">
             <div class="question-number">3</div>
-            <div class="question-text">What is a variable in Python?</div>
+            <div class="question-text">What will this code print?</div>
+            <div class="code-box">
+              <pre>
+print(Hello)
+</pre
+              >
+            </div>
             <div class="options">
               <div class="option">
-                <input type="radio" name="q3" value="A" /><label
-                  >A program</label
-                >
+                <input type="radio" name="q3" value="A" /><label>Hello</label>
               </div>
               <div class="option">
-                <input type="radio" name="q3" value="B" /><label
-                  >A function</label
-                >
+                <input type="radio" name="q3" value="B" /><label>"Hello"</label>
               </div>
               <div class="option">
                 <input type="radio" name="q3" value="C" /><label
-                  >A container that stores values</label
+                  >print(Hello)</label
                 >
               </div>
               <div class="option">
-                <input type="radio" name="q3" value="D" /><label
-                  >A type of error</label
-                >
+                <input type="radio" name="q3" value="D" /><label>Error</label>
               </div>
             </div>
           </div>
 
-          <!-- QUESTION 4 -->
+          <!-- Question 4 (MEDIUM – programming concept) -->
           <div class="question-block">
             <div class="question-number">4</div>
             <div class="question-text">What is programming?</div>
@@ -834,7 +846,7 @@
             </div>
           </div>
 
-          <!-- QUESTION 5 -->
+          <!-- Question 5 (MEDIUM – Python beginner-friendly) -->
           <div class="question-block">
             <div class="question-number">5</div>
             <div class="question-text">
@@ -864,6 +876,34 @@
             </div>
           </div>
 
+          <!-- Question 6 (HARD – TRICKY MIX: variable + arithmetic + print) -->
+          <div class="question-block">
+            <div class="question-number">6</div>
+            <div class="question-text">🔥 What will be printed?</div>
+            <div class="code-box">
+              <pre>
+x = 5
+y = x + 3
+print(y - x)
+</pre
+              >
+            </div>
+            <div class="options">
+              <div class="option">
+                <input type="radio" name="q6" value="A" /><label>8</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="B" /><label>5</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="C" /><label>3</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="D" /><label>Error</label>
+              </div>
+            </div>
+          </div>
+
           <button type="submit" class="submit-btn" id="submitBtn">
             <span>🎉 Submit My Answers! 🎉</span>
           </button>
@@ -880,11 +920,12 @@
 
     <script>
       const correctAnswers = {
-        q1: "D",
+        q1: "C",
         q2: "B",
-        q3: "C",
+        q3: "D",
         q4: "B",
         q5: "C",
+        q6: "C",
       };
 
       const QUIZ_DURATION = 180;

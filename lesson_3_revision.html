@@ -283,6 +283,10 @@
         background: linear-gradient(135deg, #fff4a3 0%, #ffe66d 100%);
       }
 
+      .question-block:nth-child(6) {
+        background: linear-gradient(135deg, #ffd6a5 0%, #fdffb6 100%);
+      }
+
       .question-block:hover {
         transform: scale(1.02);
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
@@ -723,23 +727,25 @@
         </div>
         <div class="progress-info">
           <div class="progress-label">📊 Progress:</div>
-          <div class="progress-value" id="progress">0/5</div>
+          <div class="progress-value" id="progress">0/6</div>
         </div>
       </div>
 
       <div class="content">
         <form id="quizForm">
-          <!-- Q1: Assignment -->
+          <!-- Question 1 (VERY EASY) -->
           <div class="question-block">
             <div class="question-number">1</div>
             <div class="question-text">
               📦 A box stores 5 balls. What will this code print?
             </div>
-            <pre>
+            <div class="code-box">
+              <pre>
 balls = 5
 print(balls)
-  </pre
-            >
+</pre
+              >
+            </div>
             <div class="options">
               <div class="option">
                 <input type="radio" name="q1" value="A" /><label>0</label>
@@ -756,19 +762,21 @@ print(balls)
             </div>
           </div>
 
-          <!-- Q2: Reassignment -->
+          <!-- Question 2 (EASY) -->
           <div class="question-block">
             <div class="question-number">2</div>
             <div class="question-text">
               🔁 A score is updated again and again. What is the final value?
             </div>
-            <pre>
+            <div class="code-box">
+              <pre>
 score = 10
 score = score + 5
 score = score - 3
 print(score)
-  </pre
-            >
+</pre
+              >
+            </div>
             <div class="options">
               <div class="option">
                 <input type="radio" name="q2" value="A" /><label>12</label>
@@ -785,19 +793,21 @@ print(score)
             </div>
           </div>
 
-          <!-- Q3: Swap variables -->
+          <!-- Question 3 (EASY) -->
           <div class="question-block">
             <div class="question-number">3</div>
             <div class="question-text">
               🔄 Two friends exchange their bags. What will be printed?
             </div>
-            <pre>
+            <div class="code-box">
+              <pre>
 a = 3
 b = 7
 a, b = b, a
 print(a, b)
-  </pre
-            >
+</pre
+              >
+            </div>
             <div class="options">
               <div class="option">
                 <input type="radio" name="q3" value="A" /><label>3 7</label>
@@ -814,16 +824,18 @@ print(a, b)
             </div>
           </div>
 
-          <!-- Q4: Multiple operators -->
+          <!-- Question 4 (MEDIUM – BODMAS) -->
           <div class="question-block">
             <div class="question-number">4</div>
             <div class="question-text">
               🧠 What is the result of this expression?
             </div>
-            <pre>
+            <div class="code-box">
+              <pre>
 print(5 + 3 * 2)
-  </pre
-            >
+</pre
+              >
+            </div>
             <div class="options">
               <div class="option">
                 <input type="radio" name="q4" value="A" /><label>16</label>
@@ -840,19 +852,21 @@ print(5 + 3 * 2)
             </div>
           </div>
 
-          <!-- Q5: Mixed expression + reassignment -->
+          <!-- Question 5 (MEDIUM – COMPOUND ASSIGNMENT) -->
           <div class="question-block">
             <div class="question-number">5</div>
             <div class="question-text">
               🚀 A robot’s power changes. What is the final value?
             </div>
-            <pre>
+            <div class="code-box">
+              <pre>
 power = 4
 power *= 3
 power = power + 2
 print(power)
-  </pre
-            >
+</pre
+              >
+            </div>
             <div class="options">
               <div class="option">
                 <input type="radio" name="q5" value="A" /><label>12</label>
@@ -865,6 +879,37 @@ print(power)
               </div>
               <div class="option">
                 <input type="radio" name="q5" value="D" /><label>20</label>
+              </div>
+            </div>
+          </div>
+          <!-- Question 6 (HARD – NEW THINKING, NOT REPEATED) -->
+          <div class="question-block">
+            <div class="question-number">6</div>
+            <div class="question-text">
+              🔥 Two values are swapped and then used in a calculation. What
+              will be printed?
+            </div>
+            <div class="code-box">
+              <pre>
+a = 4
+b = 6
+a, b = b, a
+print(a * 2 + b)
+</pre
+              >
+            </div>
+            <div class="options">
+              <div class="option">
+                <input type="radio" name="q6" value="A" /><label>14</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="B" /><label>16</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="C" /><label>18</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="D" /><label>20</label>
               </div>
             </div>
           </div>
@@ -885,11 +930,12 @@ print(power)
 
     <script>
       const correctAnswers = {
-        q1: "B", // assignment
-        q2: "A", // reassignment
-        q3: "B", // swap
-        q4: "B", // operator precedence
-        q5: "B", // mixed expression
+        q1: "B",
+        q2: "A",
+        q3: "B",
+        q4: "B",
+        q5: "B",
+        q6: "B",
       };
 
       const QUIZ_DURATION = 180;

@@ -283,6 +283,10 @@
         background: linear-gradient(135deg, #fff4a3 0%, #ffe66d 100%);
       }
 
+      .question-block:nth-child(6) {
+        background: linear-gradient(135deg, #ffd6a5 0%, #fdffb6 100%);
+      }
+
       .question-block:hover {
         transform: scale(1.02);
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
@@ -723,30 +727,31 @@
         </div>
         <div class="progress-info">
           <div class="progress-label">📊 Progress:</div>
-          <div class="progress-value" id="progress">0/5</div>
+          <div class="progress-value" id="progress">0/6</div>
         </div>
       </div>
 
       <div class="content">
         <form id="quizForm">
+          <!-- Question 1 (EASY – nested if true/true) -->
           <div class="question-block">
             <div class="question-number">1</div>
             <div class="question-text">
               🏫 A school checks uniform and ID. What will this code print?
             </div>
-            <pre>
+            <div class="code-box">
+              <pre>
 uniform = True
-id_card = False
+id_card = True
 
 if uniform:
     if id_card:
         print("Enter class")
     else:
         print("ID missing")
-else:
-    print("No uniform")
-    </pre
-            >
+</pre
+              >
+            </div>
             <div class="options">
               <div class="option">
                 <input type="radio" name="q1" value="A" /><label
@@ -769,12 +774,14 @@ else:
             </div>
           </div>
 
+          <!-- Question 2 (EASY – nested if true/false) -->
           <div class="question-block">
             <div class="question-number">2</div>
             <div class="question-text">
               🛒 Online shop checks login and balance. What will be printed?
             </div>
-            <pre>
+            <div class="code-box">
+              <pre>
 login = True
 balance = 0
 
@@ -783,10 +790,9 @@ if login:
         print("Order placed")
     else:
         print("Add money")
-else:
-    print("Login first")
-    </pre
-            >
+</pre
+              >
+            </div>
             <div class="options">
               <div class="option">
                 <input type="radio" name="q2" value="A" /><label
@@ -809,12 +815,14 @@ else:
             </div>
           </div>
 
+          <!-- Question 3 (MEDIUM – outer else runs) -->
           <div class="question-block">
             <div class="question-number">3</div>
             <div class="question-text">
               🎮 Game level unlock check. What will this print?
             </div>
-            <pre>
+            <div class="code-box">
+              <pre>
 level = 5
 key = True
 
@@ -825,8 +833,9 @@ if level >= 10:
         print("Key needed")
 else:
     print("Play more")
-    </pre
-            >
+</pre
+              >
+            </div>
             <div class="options">
               <div class="option">
                 <input type="radio" name="q3" value="A" /><label
@@ -849,12 +858,14 @@ else:
             </div>
           </div>
 
+          <!-- Question 4 (MEDIUM – print outside nested block) -->
           <div class="question-block">
             <div class="question-number">4</div>
             <div class="question-text">
-              🏧 ATM checks card and pin. What will be printed?
+              🏧 ATM system check. What will be printed?
             </div>
-            <pre>
+            <div class="code-box">
+              <pre>
 card = True
 pin = False
 
@@ -863,24 +874,24 @@ if card:
         print("Cash withdrawn")
     else:
         print("Wrong pin")
-else:
-    print("Insert card")
-    </pre
-            >
+print("Thank you")
+</pre
+              >
+            </div>
             <div class="options">
               <div class="option">
                 <input type="radio" name="q4" value="A" /><label
-                  >Cash withdrawn</label
-                >
-              </div>
-              <div class="option">
-                <input type="radio" name="q4" value="B" /><label
                   >Wrong pin</label
                 >
               </div>
               <div class="option">
+                <input type="radio" name="q4" value="B" /><label
+                  >Wrong pin Thank you</label
+                >
+              </div>
+              <div class="option">
                 <input type="radio" name="q4" value="C" /><label
-                  >Insert card</label
+                  >Thank you</label
                 >
               </div>
               <div class="option">
@@ -889,14 +900,16 @@ else:
             </div>
           </div>
 
+          <!-- Question 5 (MEDIUM+ – truthy/falsey nested) -->
           <div class="question-block">
             <div class="question-number">5</div>
             <div class="question-text">
               🚪 Office entry system. What will this code print?
             </div>
-            <pre>
-door = False
-password = True
+            <div class="code-box">
+              <pre>
+door = 1
+password = 0
 
 if door:
     if password:
@@ -905,8 +918,9 @@ if door:
         print("Wrong password")
 else:
     print("Door closed")
-    </pre
-            >
+</pre
+              >
+            </div>
             <div class="options">
               <div class="option">
                 <input type="radio" name="q5" value="A" /><label
@@ -929,6 +943,40 @@ else:
             </div>
           </div>
 
+          <!-- Question 6 (HARD – NESTED + FLOW + OUTSIDE PRINT TRICK) -->
+          <div class="question-block">
+            <div class="question-number">6</div>
+            <div class="question-text">🔥 What will be printed?</div>
+            <div class="code-box">
+              <pre>
+x = True
+y = False
+
+if x:
+    if y:
+        print("A")
+    else:
+        print("B")
+print("C")
+</pre
+              >
+            </div>
+            <div class="options">
+              <div class="option">
+                <input type="radio" name="q6" value="A" /><label>B</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="B" /><label>B C</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="C" /><label>C</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="D" /><label>A C</label>
+              </div>
+            </div>
+          </div>
+
           <button type="submit" class="submit-btn" id="submitBtn">
             <span>🎉 Submit My Answers! 🎉</span>
           </button>
@@ -945,11 +993,12 @@ else:
 
     <script>
       const correctAnswers = {
-        q1: "B",
+        q1: "A",
         q2: "B",
-        q3: "A",
-        q4: "C",
-        q5: "C",
+        q3: "C",
+        q4: "B",
+        q5: "B",
+        q6: "B",
       };
 
       const QUIZ_DURATION = 180;

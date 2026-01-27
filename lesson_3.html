@@ -283,6 +283,10 @@
         background: linear-gradient(135deg, #fff4a3 0%, #ffe66d 100%);
       }
 
+      .question-block:nth-child(6) {
+        background: linear-gradient(135deg, #ffd6a5 0%, #fdffb6 100%);
+      }
+
       .question-block:hover {
         transform: scale(1.02);
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
@@ -723,19 +727,25 @@
         </div>
         <div class="progress-info">
           <div class="progress-label">📊 Progress:</div>
-          <div class="progress-value" id="progress">0/5</div>
+          <div class="progress-value" id="progress">0/6</div>
         </div>
       </div>
 
       <div class="content">
         <form id="quizForm">
+          <!-- Question 1 (VERY EASY) -->
           <div class="question-block">
             <div class="question-number">1</div>
             <div class="question-text">
               🍎 A shop sells 1 chocolate for ₹20. Riya buys 7 chocolates. What
               will this code print?
             </div>
-            <pre>print(20 * 7)</pre>
+            <div class="code-box">
+              <pre>
+print(20 * 7)
+</pre
+              >
+            </div>
             <div class="options">
               <div class="option">
                 <input type="radio" name="q1" value="A" /><label>120</label>
@@ -752,17 +762,20 @@
             </div>
           </div>
 
+          <!-- Question 2 (EASY) -->
           <div class="question-block">
             <div class="question-number">2</div>
             <div class="question-text">
               🎮 A game score starts at 10. What will be the final score?
             </div>
-            <pre>
+            <div class="code-box">
+              <pre>
 score = 10
 score += 5
 score *= 2
-  </pre
-            >
+</pre
+              >
+            </div>
             <div class="options">
               <div class="option">
                 <input type="radio" name="q2" value="A" /><label>20</label>
@@ -779,10 +792,16 @@ score *= 2
             </div>
           </div>
 
+          <!-- Question 3 (EASY) -->
           <div class="question-block">
             <div class="question-number">3</div>
             <div class="question-text">⚖️ What will the computer print?</div>
-            <pre>print(15 > 10)</pre>
+            <div class="code-box">
+              <pre>
+print(15 > 10)
+</pre
+              >
+            </div>
             <div class="options">
               <div class="option">
                 <input type="radio" name="q3" value="A" /><label>15</label>
@@ -799,13 +818,19 @@ score *= 2
             </div>
           </div>
 
+          <!-- Question 4 (MEDIUM) -->
           <div class="question-block">
             <div class="question-number">4</div>
             <div class="question-text">
               🧠 A robot can move only if BOTH conditions are true. What will
               this code print?
             </div>
-            <pre>print(5 > 3 and 2 < 1)</pre>
+            <div class="code-box">
+              <pre>
+print(5 > 3 and 2 < 1)
+</pre
+              >
+            </div>
             <div class="options">
               <div class="option">
                 <input type="radio" name="q4" value="A" /><label>True</label>
@@ -822,24 +847,54 @@ score *= 2
             </div>
           </div>
 
+          <!-- Question 5 (MEDIUM – MEMBERSHIP OPERATOR) -->
           <div class="question-block">
             <div class="question-number">5</div>
-            <div class="question-text">🤖 What will the computer do first?</div>
-            <pre>(5 + 3) * 2</pre>
+            <div class="question-text">📦 What will the computer print?</div>
+            <div class="code-box">
+              <pre>
+print("a" in "apple")
+</pre
+              >
+            </div>
             <div class="options">
               <div class="option">
-                <input type="radio" name="q5" value="A" /><label>Add</label>
+                <input type="radio" name="q5" value="A" /><label>True</label>
               </div>
               <div class="option">
-                <input type="radio" name="q5" value="B" /><label
-                  >Multiply</label
-                >
+                <input type="radio" name="q5" value="B" /><label>False</label>
               </div>
               <div class="option">
-                <input type="radio" name="q5" value="C" /><label>Compare</label>
+                <input type="radio" name="q5" value="C" /><label>a</label>
               </div>
               <div class="option">
-                <input type="radio" name="q5" value="D" /><label>Assign</label>
+                <input type="radio" name="q5" value="D" /><label>Error</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 6 (HARD – TRICKY OPERATOR THINKING) -->
+          <div class="question-block">
+            <div class="question-number">6</div>
+            <div class="question-text">🔥 What will be printed?</div>
+            <div class="code-box">
+              <pre>
+print(10 + (5 > 3) * 2)
+</pre
+              >
+            </div>
+            <div class="options">
+              <div class="option">
+                <input type="radio" name="q6" value="A" /><label>10</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="B" /><label>12</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="C" /><label>14</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="D" /><label>Error</label>
               </div>
             </div>
           </div>
@@ -860,11 +915,12 @@ score *= 2
 
     <script>
       const correctAnswers = {
-        q1: "B", // 20 * 7 = 140
-        q2: "C", // (10 + 5) * 2 = 30
-        q3: "C", // True
-        q4: "B", 
-        q5: "A", // Brackets first → Add
+        q1: "B",
+        q2: "D",
+        q3: "C",
+        q4: "B",
+        q5: "A",
+        q6: "B",
       };
 
       const QUIZ_DURATION = 180;

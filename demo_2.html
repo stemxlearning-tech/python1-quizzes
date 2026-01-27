@@ -294,6 +294,9 @@
       .question-block:nth-child(5) {
         background: linear-gradient(135deg, #fff4a3 0%, #ffe66d 100%);
       }
+      .question-block:nth-child(6) {
+        background: linear-gradient(135deg, #ffd6a5 0%, #fdffb6 100%);
+      }
 
       .question-block:hover {
         transform: scale(1.02);
@@ -723,7 +726,7 @@
         </div>
         <div class="progress-info">
           <div class="progress-label">📊 Progress:</div>
-          <div class="progress-value" id="progress">0/5</div>
+          <div class="progress-value" id="progress">0/6</div>
         </div>
       </div>
 
@@ -891,6 +894,51 @@ else:
               </div>
             </div>
           </div>
+          <!-- Question 6 (HARD) -->
+          <div class="question-block">
+            <div class="question-number">6</div>
+            <div class="question-text">
+              🚀 A coding club allows entry only if:
+              <br /><br />
+              ✅ age is 15 or more
+              <br />
+              ✅ ID card is shown
+              <br /><br />
+              If age = 14 and ID = "yes", what will be printed?
+            </div>
+
+            <div class="code-box">
+              <pre>
+age = int(input())
+id_card = input()
+
+if age >= 15 and id_card == "yes":
+    print("Entry Allowed 🎉")
+else:
+    print("Entry Denied ❌")
+</pre
+              >
+            </div>
+
+            <div class="options">
+              <div class="option">
+                <input type="radio" name="q6" value="A" />
+                <label>Entry Allowed 🎉</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="B" />
+                <label>Entry Denied ❌</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="C" />
+                <label>14</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="D" />
+                <label>Error</label>
+              </div>
+            </div>
+          </div>
 
           <button type="submit" class="submit-btn" id="submitBtn">
             <span>🎉 Submit My Answers! 🎉</span>
@@ -913,6 +961,7 @@ else:
         q3: "A",
         q4: "B",
         q5: "B",
+        q6: "B",
       };
 
       const QUIZ_DURATION = 180;
