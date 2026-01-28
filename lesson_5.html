@@ -733,51 +733,81 @@
 
       <div class="content">
         <form id="quizForm">
-         <!-- Question 1 (VERY EASY – if) -->
-<div class="question-block">
-  <div class="question-number">1</div>
-  <div class="question-text">
-    📱 A phone checks battery level. What will this code print?
-  </div>
-  <div class="code-box">
-<pre>
+          <!-- Question 1 (VERY EASY – if) -->
+          <div class="question-block">
+            <div class="question-number">1</div>
+            <div class="question-text">
+              📱 A phone checks battery level. What will this code print?
+            </div>
+            <div class="code-box">
+              <pre>
 battery = 15
 
 if battery > 20:
     print("Enough battery")
-</pre>
-  </div>
-  <div class="options">
-    <div class="option"><input type="radio" name="q1" value="A"><label>Enough battery</label></div>
-    <div class="option"><input type="radio" name="q1" value="B"><label>No output</label></div>
-    <div class="option"><input type="radio" name="q1" value="C"><label>Low battery</label></div>
-    <div class="option"><input type="radio" name="q1" value="D"><label>Error</label></div>
-  </div>
-</div>
+</pre
+              >
+            </div>
+            <div class="options">
+              <div class="option">
+                <input type="radio" name="q1" value="A" /><label
+                  >Enough battery</label
+                >
+              </div>
+              <div class="option">
+                <input type="radio" name="q1" value="B" /><label
+                  >No output</label
+                >
+              </div>
+              <div class="option">
+                <input type="radio" name="q1" value="C" /><label
+                  >Low battery</label
+                >
+              </div>
+              <div class="option">
+                <input type="radio" name="q1" value="D" /><label>Error</label>
+              </div>
+            </div>
+          </div>
 
-<!-- Question 2 (EASY – if else) -->
-<div class="question-block">
-  <div class="question-number">2</div>
-  <div class="question-text">
-    📱 Phone battery check with else. What will be printed?
-  </div>
-  <div class="code-box">
-<pre>
+          <!-- Question 2 (EASY – if else) -->
+          <div class="question-block">
+            <div class="question-number">2</div>
+            <div class="question-text">
+              📱 Phone battery check with else. What will be printed?
+            </div>
+            <div class="code-box">
+              <pre>
 battery = 15
 
 if battery > 20:
     print("Enough battery")
 else:
     print("Low battery")
-</pre>
-  </div>
-  <div class="options">
-    <div class="option"><input type="radio" name="q2" value="A"><label>Enough battery</label></div>
-    <div class="option"><input type="radio" name="q2" value="B"><label>Low battery</label></div>
-    <div class="option"><input type="radio" name="q2" value="C"><label>No output</label></div>
-    <div class="option"><input type="radio" name="q2" value="D"><label>Error</label></div>
-  </div>
-</div>
+</pre
+              >
+            </div>
+            <div class="options">
+              <div class="option">
+                <input type="radio" name="q2" value="A" /><label
+                  >Enough battery</label
+                >
+              </div>
+              <div class="option">
+                <input type="radio" name="q2" value="B" /><label
+                  >Low battery</label
+                >
+              </div>
+              <div class="option">
+                <input type="radio" name="q2" value="C" /><label
+                  >No output</label
+                >
+              </div>
+              <div class="option">
+                <input type="radio" name="q2" value="D" /><label>Error</label>
+              </div>
+            </div>
+          </div>
           <!-- Question 3 (EASY – BOOLEAN + LOGICAL OPERATOR) -->
           <div class="question-block">
             <div class="question-number">3</div>
@@ -846,11 +876,11 @@ else:
             </div>
           </div>
 
-          <!-- Question 5 (MEDIUM – INDENTATION THINKING) -->
+          <!-- Question 5 (MEDIUM – LOGIC THINKING) -->
           <div class="question-block">
             <div class="question-number">5</div>
             <div class="question-text">
-              🧠 Indentation check: What will be printed?
+              🧠 What will be printed when the code runs?
             </div>
             <div class="code-box">
               <pre>
@@ -858,7 +888,7 @@ x = 5
 
 if x > 3:
     print("Hello")
-    print("World")
+print("World")
 </pre
               >
             </div>
@@ -875,19 +905,17 @@ if x > 3:
                 >
               </div>
               <div class="option">
-                <input type="radio" name="q5" value="D" /><label>Error</label>
+                <input type="radio" name="q5" value="D" /><label>Nothing</label>
               </div>
             </div>
           </div>
 
           <!-- Question 6 (VERY HARD – FLOW + PASS + INDENTATION TRICK) -->
-<div class="question-block">
-  <div class="question-number">6</div>
-  <div class="question-text">
-    🔥 What will be printed?
-  </div>
-  <div class="code-box">
-<pre>
+          <div class="question-block">
+            <div class="question-number">6</div>
+            <div class="question-text">🔥 What will be printed?</div>
+            <div class="code-box">
+              <pre>
 x = 2
 
 if x > 5:
@@ -898,16 +926,26 @@ else:
     print("B")
 
 print("C")
-</pre>
-  </div>
-  <div class="options">
-    <div class="option"><input type="radio" name="q6" value="A"><label>A C</label></div>
-    <div class="option"><input type="radio" name="q6" value="B"><label>B C</label></div>
-    <div class="option"><input type="radio" name="q6" value="C"><label>C</label></div>
-    <div class="option"><input type="radio" name="q6" value="D"><label>No output</label></div>
-  </div>
-</div>
-
+</pre
+              >
+            </div>
+            <div class="options">
+              <div class="option">
+                <input type="radio" name="q6" value="A" /><label>A C</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="B" /><label>B C</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="C" /><label>C</label>
+              </div>
+              <div class="option">
+                <input type="radio" name="q6" value="D" /><label
+                  >No output</label
+                >
+              </div>
+            </div>
+          </div>
 
           <button type="submit" class="submit-btn" id="submitBtn">
             <span>🎉 Submit My Answers! 🎉</span>

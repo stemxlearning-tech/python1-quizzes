@@ -28,6 +28,18 @@
         min-height: 100vh;
         padding: 20px;
       }
+      pre {
+        background: #0f172a;
+        color: #e5e7eb;
+        padding: 16px 20px;
+        border-radius: 12px;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 15px 0;
+        overflow-x: auto;
+        font-family: "Poppins", monospace;
+        box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.1);
+      }
 
       @keyframes gradientShift {
         0% {
@@ -721,34 +733,35 @@
 
       <div class="content">
         <form id="quizForm">
-          <!-- Question 1 (VERY EASY) -->
-          <div class="question-block">
-            <div class="question-number">1</div>
-            <div class="question-text">🤔 What is programming?</div>
-            <div class="options">
-              <div class="option">
-                <input type="radio" name="q1" value="A" /><label
-                  >Playing video games on a computer</label
-                >
-              </div>
-              <div class="option">
-                <input type="radio" name="q1" value="B" /><label
-                  >Writing step-by-step instructions for computers to
-                  follow</label
-                >
-              </div>
-              <div class="option">
-                <input type="radio" name="q1" value="C" /><label
-                  >Using social media applications</label
-                >
-              </div>
-              <div class="option">
-                <input type="radio" name="q1" value="D" /><label
-                  >Browsing the internet</label
-                >
-              </div>
-            </div>
-          </div>
+         <!-- Question 1 (VERY EASY – COMMENTS) -->
+<div class="question-block">
+  <div class="question-number">1</div>
+  <div class="question-text">
+    💬 Which line will be ignored by Python when the program runs?
+  </div>
+  <div class="code-box">
+<pre>
+print("Hello")
+# print("Hi")
+print("Bye")
+</pre>
+  </div>
+  <div class="options">
+    <div class="option">
+      <input type="radio" name="q1" value="A" /><label>print("Hello")</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q1" value="B" /><label># print("Hi")</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q1" value="C" /><label>print("Bye")</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q1" value="D" /><label>All lines run</label>
+    </div>
+  </div>
+</div>
+
 
           <!-- Question 2 (EASY) -->
           <div class="question-block">
@@ -810,33 +823,33 @@
             </div>
           </div>
 
-          <!-- Question 4 (MEDIUM) -->
-          <div class="question-block">
-            <div class="question-number">4</div>
-            <div class="question-text">🚀 What does a programmer do?</div>
-            <div class="options">
-              <div class="option">
-                <input type="radio" name="q4" value="A" /><label
-                  >Repairs broken computers</label
-                >
-              </div>
-              <div class="option">
-                <input type="radio" name="q4" value="B" /><label
-                  >Designs computer hardware</label
-                >
-              </div>
-              <div class="option">
-                <input type="radio" name="q4" value="C" /><label
-                  >Writes code to tell computers what to do</label
-                >
-              </div>
-              <div class="option">
-                <input type="radio" name="q4" value="D" /><label
-                  >Only works with robots</label
-                >
-              </div>
-            </div>
-          </div>
+       <!-- Question 4 (MEDIUM – sep parameter) -->
+<div class="question-block">
+  <div class="question-number">4</div>
+  <div class="question-text">
+    🔗 What will be the output of this code?
+  </div>
+  <div class="code-box">
+<pre>
+print("A", "B", "C", sep="*")
+</pre>
+  </div>
+  <div class="options">
+    <div class="option">
+      <input type="radio" name="q4" value="A" /><label>A B C</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q4" value="B" /><label>A*B*C</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q4" value="C" /><label>ABC</label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q4" value="D" /><label>Error</label>
+    </div>
+  </div>
+</div>
+
 
           <!-- Question 5 (MEDIUM) -->
           <div class="question-block">
@@ -916,7 +929,7 @@ print("Python", "is", "fun", sep="-", end="!")
         q1: "B",
         q2: "B",
         q3: "D",
-        q4: "C",
+        q4: "B",
         q5: "B",
         q6: "B",
       };

@@ -716,7 +716,6 @@
           </div>
         </div>
         <h1 class="quiz-title">🎯 Demo 2 Quiz</h1>
-        <p class="quiz-subtitle">Introduction to Programming & Python</p>
       </div>
 
       <div class="timer-section">
@@ -735,29 +734,29 @@
           <div class="question-block">
             <div class="question-number">1</div>
             <div class="question-text">
-              🧠 A smart door opens only when:
-              <br /><br />
+              ⌨️ What will be printed if the user enters 5?
+            </div>
 
-              🔐 The password is correct
-              <br />
-              👤 The face is recognized
-              <br /><br />
-
-              👉 Which condition logic is used here?
+            <div class="code-box">
+              <pre>
+num = int(input())
+print(num + 3)
+</pre
+              >
             </div>
 
             <div class="options">
               <div class="option">
-                <input type="radio" name="q1" value="A" /><label>OR</label>
+                <input type="radio" name="q1" value="A" /><label>5</label>
               </div>
               <div class="option">
-                <input type="radio" name="q1" value="B" /><label>AND</label>
+                <input type="radio" name="q1" value="B" /><label>8</label>
               </div>
               <div class="option">
-                <input type="radio" name="q1" value="C" /><label>NOT</label>
+                <input type="radio" name="q1" value="C" /><label>Error</label>
               </div>
               <div class="option">
-                <input type="radio" name="q1" value="D" /><label>==</label>
+                <input type="radio" name="q1" value="D" /><label>num + 3</label>
               </div>
             </div>
           </div>
@@ -843,8 +842,8 @@ else:
             </div>
             <div class="code-box">
               <pre>
-num = int(input())
-if num:
+number = int(input())
+if number:
     print("YES")
 else:
     print("NO")
@@ -867,78 +866,62 @@ else:
             </div>
           </div>
 
-          <!-- Question 5 -->
           <div class="question-block">
             <div class="question-number">5</div>
             <div class="question-text">
-              🎒 A school app checks if a student can enter the playground.
-              Entry is allowed only if age is greater than 10 AND shoes are
-              worn. Which condition is correct?
-            </div>
-            <div class="options">
-              <div class="option">
-                <input type="radio" id="q5a" name="q5" value="A" />
-                <label for="q5a">age &gt; 10 or shoes == "yes"</label>
-              </div>
-              <div class="option">
-                <input type="radio" id="q5b" name="q5" value="B" />
-                <label for="q5b">age &gt; 10 and shoes == "yes"</label>
-              </div>
-              <div class="option">
-                <input type="radio" id="q5" name="q5" value="C" />
-                <label for="q5c">age = 10 and shoes = yes</label>
-              </div>
-              <div class="option">
-                <input type="radio" id="q5d" name="q5" value="D" />
-                <label for="q5d">age == 10 or shoes == "no"</label>
-              </div>
-            </div>
-          </div>
-          <!-- Question 6 (HARD) -->
-          <div class="question-block">
-            <div class="question-number">6</div>
-            <div class="question-text">
-              🚀 A coding club allows entry only if:
-              <br /><br />
-              ✅ age is 15 or more
-              <br />
-              ✅ ID card is shown
-              <br /><br />
-              If age = 14 and ID = "yes", what will be printed?
+              🧮 A student’s score is calculated. What will be printed?
             </div>
 
             <div class="code-box">
               <pre>
-age = int(input())
-id_card = input()
+score = 20 * 2 - 5
 
-if age >= 15 and id_card == "yes":
-    print("Entry Allowed 🎉")
+if score >= 30:
+    print("Pass")
 else:
-    print("Entry Denied ❌")
+    print("Fail")
 </pre
               >
             </div>
 
             <div class="options">
               <div class="option">
-                <input type="radio" name="q6" value="A" />
-                <label>Entry Allowed 🎉</label>
+                <input type="radio" name="q5" value="A" /><label>Pass</label>
               </div>
               <div class="option">
-                <input type="radio" name="q6" value="B" />
-                <label>Entry Denied ❌</label>
+                <input type="radio" name="q5" value="B" /><label>Fail</label>
               </div>
               <div class="option">
-                <input type="radio" name="q6" value="C" />
-                <label>14</label>
+                <input type="radio" name="q5" value="C" /><label>35</label>
               </div>
               <div class="option">
-                <input type="radio" name="q6" value="D" />
-                <label>Error</label>
+                <input type="radio" name="q5" value="D" /><label>Error</label>
               </div>
             </div>
           </div>
+
+         <div class="question-block">
+  <div class="question-number">6</div>
+  <div class="question-text">
+    🔥 What will be printed if the user enters 4?
+  </div>
+
+  <div class="code-box">
+<pre>
+x = int(input())
+x = x * 2 + 3
+print(x - 5)
+</pre>
+  </div>
+
+  <div class="options">
+    <div class="option"><input type="radio" name="q6" value="A"><label>6</label></div>
+    <div class="option"><input type="radio" name="q6" value="B"><label>8</label></div>
+    <div class="option"><input type="radio" name="q6" value="C"><label>10</label></div>
+    <div class="option"><input type="radio" name="q6" value="D"><label>Error</label></div>
+  </div>
+</div>
+
 
           <button type="submit" class="submit-btn" id="submitBtn">
             <span>🎉 Submit My Answers! 🎉</span>
@@ -960,8 +943,8 @@ else:
         q2: "B",
         q3: "A",
         q4: "B",
-        q5: "B",
-        q6: "B",
+        q5: "A",
+        q6: "A",
       };
 
       const QUIZ_DURATION = 180;
